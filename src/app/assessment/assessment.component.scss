@@ -4,13 +4,34 @@
 .dialogStyle {
     background: #EBEFF4;
     border-radius: 8px;
-    width: 400px;
     height: 121px;
 }
-.textFont {
-    font-family: Montserrat;
+.textFontTitle {
+    font-family: 'Montserrat-Bold';
     font-style: normal;
     font-size: 24px;
     line-height: 29px;
     color: #292B4D;
 }
+.textFont {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 29px;
+    color: #292B4D;
+}
+.inputStyle {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #CED5DE;
+}
+
+@font-face {
+font-family: 'Montserrat';
+src: url('../../assets/font/Montserrat-Regular.ttf')  format('truetype')
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../../assets/font/Montserrat-Bold.ttf')  format('truetype')
+  }
