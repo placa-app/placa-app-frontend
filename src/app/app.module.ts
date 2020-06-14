@@ -23,9 +23,11 @@ import { NavbarComponent } from './navbar/navbar.component';
    imports: [
       BrowserModule,
       AppRoutingModule,
-      ServiceWorkerModule.register('ngsw-worker.js'),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+      ServiceWorkerModule.register('ngsw-worker.js')
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
