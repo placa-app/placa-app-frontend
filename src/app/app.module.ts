@@ -9,19 +9,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FeedComponent } from './feed/feed.component';
 import { OnboradingComponent } from './onborading/onborading.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AssessmentComponent,
-    FeedComponent,
-    OnboradingComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+   declarations: [
+      AppComponent,
+      HomeComponent,
+      AssessmentComponent,
+      FeedComponent,
+      OnboradingComponent,
+      NavbarComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      ServiceWorkerModule.register('ngsw-worker.js'),
   ],
   providers: [],
   bootstrap: [AppComponent]
