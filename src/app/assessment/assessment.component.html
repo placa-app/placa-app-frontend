@@ -1,7 +1,7 @@
 <div class="container backgroundStyle">
     <div class="row col-sm-12 mt-5">
         <div class="ml-2 col-8" appearance="outline" *ngIf="!step1">
-            <img src="../../assets/img/return.png" alt="return"/>
+            <img src="../../assets/img/return.png" alt="return" (click)="returnStep()"/>
         </div>
        <div class="ml-2 mt-4 col-8" appearance="outline">
            <img src="../../assets/img/assistant.png" alt="assistant"/>
@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row col-12 mt-4 pt-2 ml-1">
-            <input class="inputStyle" type="text" name="nameTrucker" />
+            <input class="inputStyle" type="text" name="nameTrucker" (focusout)="contentName()" />
         </div>
     </div>
     <div class="row col-sm-12 mt-4 pl-4" *ngIf="!!step2">
@@ -29,19 +29,19 @@
             </div>
         </div>
         <div class="row col-12 mt-4 pl-4 delimiterRetangle">
-            <div class="retangle col-5 ml-3" appearance="outline">
-                <p class="textRetangule"><b>18 - 22 </b></p>
+            <div class="retangle col-5  ml-3" appearance="outline">
+                <p class="textRetangule mt-3" (click)= "setInformations('ageRange', 1)"><b>18 - 26 </b></p>
             </div>
             <div class="retangle col-5 ml-4" appearance="outline">
-                <p class="textRetangule"><b>27 - 36 </b></p>
+                <p class="textRetangule mt-3" (click)= "setInformations('ageRange', 2)"><b>27 - 36 </b></p>
             </div>
         </div>
         <div  class="row col-12 mt-2 pl-4 delimiterRetangle">
             <div class="retangle col-5  ml-3" appearance="outline">
-                <p class="textRetangule"><b>37 - 56 </b></p>
+                <p class="textRetangule mt-3" (click)= "setInformations('ageRange', 3)"><b>37 - 56 </b></p>
             </div>
             <div class="retangle col-5 ml-4" appearance="outline">
-                <p class="textRetangule"><b>56 + </b></p>
+                <p class="textRetangule mt-3" (click)= "setInformations('ageRange', 4)"><b>56 + </b></p>
             </div>
         </div>
         
@@ -55,15 +55,15 @@
         </div>
         <div class="row col-sm-12 mt-4 ml-5 delimiterRetangle">
             <div class="retangle col-10  pt-2" appearance="outline">
-                <p class="textRetangule"><b>Carteira assinada </b></p>
+                <p class="textRetangule" (click)= "setInformations('ocupation', 1)"><b>Carteira assinada </b></p>
             </div>
         </div>
         <div class="row col-sm-12 mt-2 ml-4 delimiterRetangle">
             <div class="retangle col-6  pt-2" appearance="outline">
-                <p class="textRetangule"><b>Autônomo </b></p>
+                <p class="textRetangule" (click)= "setInformations('ocupation', 2)"><b>Autônomo</b></p>
             </div>
             <div class="retangle col-5 pt-2 ml-2" appearance="outline">
-                <p class="textRetangule"><b>Os dois </b></p>
+                <p class="textRetangule" (click)= "setInformations('ocupation', 3)"><b>Os dois </b></p>
             </div>
         </div>
     </div>
@@ -76,17 +76,17 @@
         </div>
         <div class="row col-sm-12 mt-4 ml-5 delimiterRetangle">
             <div class="retangle col-7  pt-2 paddingRetangleSmall" appearance="outline">
-                <p class="textRetangule"><b>1 a 10 anos</b></p>
+                <p class="textRetangule" (click)= "setInformations('timeOcupation', 1)"><b>1 a 10 anos</b></p>
             </div>
         </div>
         <div class="row col-sm-12 mt-2 ml-5 delimiterRetangle">
             <div class="retangle col-8  pt-2 paddingRetangle" appearance="outline">
-                <p class="textRetangule"><b>11 a 20 anos</b></p>
+                <p class="textRetangule" (click)= "setInformations('timeOcupation', 2)"><b>11 a 20 anos</b></p>
             </div>
         </div>
         <div class="row col-sm-12 mt-2 ml-5 delimiterRetangle">
             <div class="retangle col-10 pt-2" appearance="outline">
-                <p class="textRetangule"><b>Mais de 20 anos</b></p>
+                <p class="textRetangule" (click)= "setInformations('timeOcupation', 3)"><b>Mais de 20 anos</b></p>
             </div>
         </div>
     </div>
@@ -99,26 +99,26 @@
         </div>
         <div class="row col-12 mt-4  delimiterRetangle">
             <div class="retangle col-6 ml-3 pt-2" appearance="outline">
-                <p class="textRetangule"><b>Hipertensão </b></p>
+                <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 1)"><b>Hipertensão </b></p>
                 </div>
                 <div class="retangle col-5 ml-2 pt-2" appearance="outline">
-                    <p class="textRetangule"><b>Diabetes </b></p>
+                    <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 2)"><b>Diabetes </b></p>
                 </div>
             </div>
-            <div class="row col-12 mt-2  ml-3  delimiterRetangle">
-                <div class="retangle col-8 pt-2" appearance="outline">
-                    <p class="textRetangule"><b>Hérnia de disco </b></p>
+            <div class="row col-12 mt-2  ml-3 delimiterRetangle">
+                <div class="retangle col-7 pt-2" appearance="outline">
+                    <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 3)"><b>Hérnia de disco </b></p>
                 </div>
-                <div class="retangle col-4 pt-2" appearance="outline">
-                    <p class="textRetangule"><b>Visão </b></p>
+                <div class="retangle col-4 ml-2 pt-2" appearance="outline">
+                    <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 4)"><b>Visão </b></p>
                 </div>
             </div>
-            <div class="row col-12 mt-2 delimiterRetangle">
-                <div class="retangle col-6  pt-2" appearance="outline">
-                    <p class="textRetangule"><b>Cardíaco </b></p>
+            <div class="row col-12 mt-2 ml-2 delimiterRetangle">
+                <div class="retangle col-5  pt-2" appearance="outline">
+                    <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 5)"><b>Cardíaco </b></p>
                 </div>
-                <div class="retangle col-5 pt-2" appearance="outline">
-                    <p class="textRetangule"><b>Nenhum </b></p>
+                <div class="retangle col-5 ml-2 pt-2" appearance="outline">
+                    <p class="textRetanguleAlter" (click)= "setInformations('healthProblems', 6)"><b>Nenhum </b></p>
             </div>
         </div>
     </div>
@@ -126,20 +126,37 @@
         <div class="ml-2 mt-2 col-12 dialogStyle">
             <div class="mt-2">
                 <p class="textFontTitle"><b>Essa é a ultima</b></p>
-                <p class="textFont">Você trabalha quantos dias por semana?</p>
+                <p class="textFont" (click)= "setInformations('daywork', 1)">Você trabalha quantos dias por semana?</p>
             </div>
         </div>
-        <div class="row col-12 mt-4 pt-2 ml-1">
-            <input class="inputStyle" type="text" name="nameTrucker" />
+        <div class="row col-12 mt-4 ml-3 delimiterRetangle">
+            <div class="retangle col-5  pt-2" appearance="outline">
+                <p class="textRetanguleAlter"><b>1 a 2 dias </b></p>
+            </div>
+            <div class="retangle col-5 ml-2 pt-2" appearance="outline">
+                <p class="textRetanguleAlter" (click)= "setInformations('daywork', 2)"><b>3 a 5 dias </b></p>
+            </div>
+        </div>
+        <div class="row col-12 mt-2 ml-4 delimiterRetangle">
+            <div class="retangle col-7 ml-5 pt-2" appearance="outline">
+                <p class="textRetanguleAlter" (click)= "setInformations('daywork', 3)"><b>5 a 7 dias </b></p>
+            </div>
         </div>
     </div>
 </div>
-<footer class="row col-12">
-    <div class="col-10">
-        <button class="buttonContinue textFont" (click)="nextStep()">Continuar</button>
+<footer class="row col-sm-12">
+    <div class="col-10" *ngIf="!!buttonInactive && !!step1">
+        <button class="buttonContinueInactive textFont">Continuar</button>
     </div>
-    <div class="col-2" appearance="outline">
+    <div class="col-10" *ngIf="!!buttonActive && !!step1">
+        <button class="buttonContinueActive textFont" (click)="nextStep()">Continuar</button>
+    </div>
+    <div class="col-2" appearance="outline" *ngIf="!!step1">
         <img src="../../assets/img/microphone.png" alt="assistant"/>
+    </div>
+
+    <div class="col-4 positionLoader" appearance="outline"  *ngIf="!!onLoading" >
+        <img src="../../assets/img/loader.png" alt="loader"/>
     </div>
 </footer>
 
