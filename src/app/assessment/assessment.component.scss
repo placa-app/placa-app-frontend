@@ -4,6 +4,7 @@
 .dialogStyle {
     background: #EBEFF4;
     border-radius: 8px;
+    width: 100%;
     height: 121px;
 }
 .textFontTitle {
@@ -21,9 +22,21 @@
     color: #292B4D;
 }
 .inputStyle {
+    width: 100%;
     background: transparent;
     border: none;
     border-bottom: 1px solid #CED5DE;
+}
+.buttonContinue {
+    background: #EEA63A;
+    color: white;
+    border-radius: 60px;
+    border-color: #EEA63A;
+    width: 70%;
+    height: 130%;
+}
+.bottomElements {
+    bottom: 50px
 }
 
 @font-face {
