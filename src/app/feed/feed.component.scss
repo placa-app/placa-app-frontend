@@ -1,0 +1,209 @@
+.container{
+    background-color:  #292B4D;
+    width: 100%;
+    height: 100%;
+}
+.textFontTitle {
+    font-family: 'Montserrat-Bold';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: white;
+}
+.textFont {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 29px;
+    color: white;
+}
+.stylePrimaryCard {
+    background-color:  #EEA63A;
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+}
+.textTitleAlternative {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    color: white;
+}
+.iconeProperty {
+    opacity: 50%; 
+    width: 100%;
+    height: 100%;
+}
+.alingItensRight {
+    margin-left: 30%;
+}
+.paddingText {
+    margin-top: -15%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.textFormat {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+}
+.styleSnippet {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-bottom: 10%;
+}
+
+.styleOutSnippet{
+    width: 90%;
+    height: 60%;
+    background: #807CC6;
+    border-radius: 10px;
+    opacity: 50%;
+    margin-bottom: 80%;
+    margin-left: 8%;
+
+}
+.styleSnippetSecond{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    margin-left: -10%;
+    height: 20%;
+}
+.styleSnippetText {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: auto;
+    padding-top: 5%;
+    color: #FFFFFF;
+    margin-bottom: 3%;
+}
+.styleSnippetTextSecondary{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin: auto;
+    color: #FFFFFF;
+}
+footer {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    
+}
+.footerStyle {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: #FFFFFF;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: 150%;
+}
+.headerFooter {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 66.97%;
+    background: #CED5DE;
+    opacity: 0.35;
+    border-radius: 30px 30px 0px 0px;
+    
+}
+.textColor {
+    color: #FFFFFF;
+}
+.headerFooter {
+    width: 100%;
+    height: 30%;
+}
+.styleTextFooter {
+    font-family: 'Roboto';
+    font-size: 20px;
+    line-height: 23px;
+    color: #292B4D;
+    margin-top: 30%;
+}
+
+.styleTextFooterDescription{
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    color: #292B4D;
+    opacity: 0.6;
+    margin-top: -8%;
+}
+
+.styleFontHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #292B4D;
+    opacity: 0.6;
+    margin-top: 3%;
+}
+
+.disabled {
+    background: #292B4D;
+    position: relative;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+}
+.styleTutorialyCard{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background: #EBEFF4;
+    flex: none;
+    order: 0;
+    align-self: flex-end;
+}
+.alingTutorial{
+    z-index: 1;
+    margin-top: -115%;
+    position: relative;
+}
+.styleTextTitle {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #292B4D;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../assets/font/Montserrat-Regular.ttf')  format('truetype')
+}
+    
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../../assets/font/Montserrat-Bold.ttf')  format('truetype')
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/font/Roboto-Regular.ttf')  format('truetype')
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../../assets/font/Roboto-Bold.ttf')  format('truetype')
+}
