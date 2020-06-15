@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -8,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class FeedComponent implements OnInit {
   tutorial = true;
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
