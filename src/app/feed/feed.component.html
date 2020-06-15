@@ -82,16 +82,29 @@
     </div>
     <div class="row col-sm-12 alingTutorial" *ngIf="!!tutorial">
         <div class="col-12 mt-2 ml-2 styleTutorialyCard">
-          <div class="col-4">
-            <img src="../../assets/img/assistant.png" class="mt-3" alt="assistant"/>
-          </div>
-          <div class="col-4">
-            <img src="../../assets/img/sound.png" class="mt-3" alt="assistant"/>
-          </div>
-        <div>
-        <div>
-            <p class="styleTextTitle"><b>Eai Jânio, beleza?</b></p>
+            <div>
+                <div class="col" appearance="outline">
+                  <img src="../../assets/img/assistant.png" class="mt-3" alt="assistant"/>
+                </div>
+                <div class="col alingTutorialText">
+                  <p class="styleTextTitle"><b>Eai Jânio, beleza?</b></p>
+              </div>
+            </div>
+            <div>
+                <div class="col">
+                    <img src="../../assets/img/sound.png" class="mt-3" alt="assistant"/>
+                </div>
+                <div class="col alingTutorialSubText">
+                    <p class="styleSubTitle"><b>Passando aqui para te ensinar <br> um pouco sobre a nossa solução.</b></p>
+                </div>
+            </div>
+    </div>
+    <div class="col-sm-12">
+        <div class="col-10 ml-4 alingButtonTutorial">
+            <button class="styleButtomTutorial pt-2">Próximo</button>
         </div>
+        <div class="col-10 alingNotSeeTutorial">
+            <p class="pt-3 textColor" (click)="notSee()">Não quero ver</p>
         </div>
     </div>
 </div>
