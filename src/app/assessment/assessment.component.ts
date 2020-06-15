@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+import { Motorista } from '../Motorista';
+
+
 
 @Component({
   selector: 'app-assessment',
@@ -20,17 +26,34 @@ export class AssessmentComponent implements OnInit {
   buttonActive = false;
   buttonInactive = true;
 
-  constructor(
+  url = 'http://localhost:5000/motorista'; 
 
+  constructor(
+    private httpClient: HttpClient
   ) { }
 
   ngOnInit(): void {
 
   }
 
+  httpOptions = {
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  }
+
+  motorista = {
+    nome: null,
+    email: null,
+    senha: null,
+    faixa_etaria: null,
+    carga_horaria: null,
+    alocacao: null,
+    status: null,
+    data_criacao: null
+  }
+
   contentName(): void {
-    const nameTruck = document.getElementsByName('nameTruck');
-    if (!!nameTruck) {
+    this.motorista.nome = document.getElementsByName('nameTruck');
+    if (!!this.motorista.nome) {
       this.buttonActive = true;
       this.buttonInactive = false;
     }
@@ -209,6 +232,19 @@ export class AssessmentComponent implements OnInit {
     if (this.step6 === true) {
       this.step6 = false;
     }
+  }
+
+  getMotorista(): Observable<Motorista[]> {
+    return this.httpClient.get<Motorista[]>(this.url)
+      .pipe(
+        retry(2))
+  }
+
+  save(motorista: Motorista): Observable<Motorista> {
+    return this.httpClient.post<Motorista>(this.url, JSON.stringify(motorista), this.httpOptions)
+      .pipe(
+        retry(2)      
+      )
   }
 
 }
